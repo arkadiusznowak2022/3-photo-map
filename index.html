@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Map</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="jquery-3.6.0.min.js"></script>
+    <script defer type="module" src="controller.js"></script>
+  </head>
+  <body>
+    <div id="main-container">
+
+      <section id="control-panel">
+        <div id="options">
+          <label><input type="checkbox" id="show-all-checkbox"></input>  Show all markers</label>
+          <button class="btn" id="btn-add">+</button>
+          <p>Place: <span id="place"></span></p>
+        </div>
+        <p>Memories</p>
+        <div id="memories-container"></div>
+      </section>
+
+      <section id="map"></section>
+
+      <div class="picture-container hidden">
+        <img src="" alt="Place picture" class="picture">
+      </div>
+      <p class="msg hidden"></p>
+    </div>
+  </body>
+</html>
