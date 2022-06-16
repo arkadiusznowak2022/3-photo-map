@@ -83,7 +83,10 @@ function initShowAll() {
       activateMemoryEl();
     }
     if (allMarkersCheckbox.checked) {
-      allMemories.forEach((el) => el.marker.addTo(map));
+      allMemories.forEach((el) => {
+        el.marker.addTo(map);
+        el.marker._icon.classList.add('marker-added');
+      });
     }
   });
 }
